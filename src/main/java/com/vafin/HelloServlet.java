@@ -7,14 +7,22 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import static java.awt.Color.red;
 
 
 public class HelloServlet extends HttpServlet {
 
     public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         System.out.println("Service called");
-        res.setContentType("text/plain");
-        res.getWriter().println("Hello, World!");
+        res.setContentType("text/html");
+
+        PrintWriter out = res.getWriter();
+
+        out.println("<span style='color: red'>Hello, World</span>");
+
+        out.println("<h2>Title</h2>");
     }
 
 }
