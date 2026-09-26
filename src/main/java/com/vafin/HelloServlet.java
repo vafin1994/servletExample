@@ -14,7 +14,7 @@ import static java.awt.Color.red;
 
 public class HelloServlet extends HttpServlet {
 
-    public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         System.out.println("Service called");
         res.setContentType("text/html");
 
