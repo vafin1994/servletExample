@@ -35,5 +35,12 @@
             <version>11.0.26</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Required by Tomcat's WebAnnotationSet when scanning servlets for annotations -->
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>
